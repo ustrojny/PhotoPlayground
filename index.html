@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo Playground</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <h1>Play with your foto!</h1>
+    <div class="generate-image">
+        <label for="uploader">Select image:</label>
+        <input type="file" id="uploader">
+        <button class="uk-button uk-button-primary" id="random">or Choose a random image</button>
+    </div>
+    <h2>Choose your effect:</h2>
+    <div class="buttons">
+        <button class="uk-button uk-button-default effects" id="greyscale">Greyscale</button>
+        <button class="uk-button uk-button-default effects" id="sepia">Sepia</button>
+        <button class="uk-button uk-button-default effects" id="invert">Invert</button>
+        <button class="uk-button uk-button-default effects" id="rbg">RGB -> RBG</button>
+        <button class="uk-button uk-button-default effects" id="bgr">RGB -> BGR</button>
+        <button class="uk-button uk-button-default effects" id="gbr">RGB -> GBR</button>
+        <button class="uk-button uk-button-default effects" id="grb">RGB -> GRB</button>
+        <button class="uk-button uk-button-default effects slider">
+            <label for="transparent">Transparent</label>
+            <input type="range" id="transparent" name="transparent" min="0" max="255">
+        </button>
+        
+        <button class=" uk-button uk-button-secondary clear" id="clear">Clear</button>
+        
+    </div>
+    <div>
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
